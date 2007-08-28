@@ -38,7 +38,6 @@ rm -rf %{buildroot}
 install -d %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
-Encoding=UTF-8
 Name=Brutal Chess
 Comment=%{Summary}
 Exec=%{_gamesbindir}/%{name}
