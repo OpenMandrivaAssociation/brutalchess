@@ -14,6 +14,7 @@ Source0:	%{name}-alpha-%{version}-src.tar.bz2
 Source11:	%{name}-16x16.png
 Source12:	%{name}-32x32.png
 Source13:	%{name}-48x48.png
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	SDL-devel SDL_image-devel X11-devel
 BuildRequires:	desktop-file-utils
 
