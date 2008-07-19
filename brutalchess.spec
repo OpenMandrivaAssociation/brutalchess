@@ -14,8 +14,11 @@ Source0:	%{name}-alpha-%{version}-src.tar.bz2
 Source11:	%{name}-16x16.png
 Source12:	%{name}-32x32.png
 Source13:	%{name}-48x48.png
+Patch0:	brutalchess-0.5.2-fix-FTBFS.patch
+Patch1:	brutalchess-0.5.2-gcc4.3.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	SDL-devel SDL_image-devel X11-devel
+BuildRequires:	SDL-devel SDL_image-devel
+BuildRequires:	freetype2-devel
 BuildRequires:	desktop-file-utils
 
 %description
@@ -26,9 +29,11 @@ Interplay circa 1988.
 
 %prep
 %setup -q
+%patch0 -p0
+%patch1 -p0
 
 %build
-%configure	--bindir=%{_gamesbindir} \
+%configure2_5x	--bindir=%{_gamesbindir} \
 		--datadir=%{_gamesdatadir}
 
 %install
