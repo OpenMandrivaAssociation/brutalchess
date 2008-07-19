@@ -16,8 +16,10 @@ Source12:	%{name}-32x32.png
 Source13:	%{name}-48x48.png
 Patch0:	brutalchess-0.5.2-fix-FTBFS.patch
 Patch1:	brutalchess-0.5.2-gcc4.3.patch
+Patch2:	brutalchess-0.5.2-use-own-fonts.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	SDL-devel SDL_image-devel
+Requires: 	fonts-ttf-dejavu
+BuildRequires:	SDL-devel SDL_image-devel X11-devel
 BuildRequires:	freetype2-devel
 BuildRequires:	desktop-file-utils
 
@@ -31,14 +33,19 @@ Interplay circa 1988.
 %setup -q
 %patch0 -p0
 %patch1 -p0
+%patch2 -p1
 
 %build
 %configure2_5x	--bindir=%{_gamesbindir} \
 		--datadir=%{_gamesdatadir}
+%make
 
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+
+# we use system default fot via patch2
+rm -fr %buildroot%{_gamesdatadir}/%{name}/fonts
 
 install -d %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
@@ -71,5 +78,3 @@ rm -rf %{buildroot}
 %{_miconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
-
-
