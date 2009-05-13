@@ -1,14 +1,14 @@
 %define	name	brutalchess
 %define	version	0.5.2
-%define	release	%mkrel 3
+%define	release	%mkrel 4
 %define	Summary	A 3D chess game inspired by Battle Chess
 
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Summary:	%{Summary}
-Group:		Games/Puzzles
-License:	GPL
+Group:		Games/Strategy
+License:	GPLv2+
 URL:		http://brutalchess.sourceforge.net/
 Source0:	%{name}-alpha-%{version}-src.tar.bz2
 Source11:	%{name}-16x16.png
