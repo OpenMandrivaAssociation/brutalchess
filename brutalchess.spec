@@ -1,6 +1,6 @@
 %define	name	brutalchess
 %define	version	0.5.2
-%define	release	%mkrel 4
+%define	release	%mkrel 5
 %define	Summary	A 3D chess game inspired by Battle Chess
 
 Name:		%{name}
