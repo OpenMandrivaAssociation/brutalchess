@@ -19,7 +19,9 @@ Patch1:	brutalchess-0.5.2-gcc4.3.patch
 Patch2:	brutalchess-0.5.2-use-own-fonts.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires: 	fonts-ttf-dejavu
-BuildRequires:	SDL-devel SDL_image-devel X11-devel
+BuildRequires:	SDL-devel
+BuildRequires:	SDL_image-devel
+BuildRequires:	mesaglu-devel
 BuildRequires:	freetype2-devel
 BuildRequires:	desktop-file-utils
 
@@ -36,6 +38,7 @@ Interplay circa 1988.
 %patch2 -p1
 
 %build
+autoreconf -fi
 %configure2_5x	--bindir=%{_gamesbindir} \
 		--datadir=%{_gamesdatadir}
 %make
