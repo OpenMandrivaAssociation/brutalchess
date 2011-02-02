@@ -39,7 +39,8 @@ Interplay circa 1988.
 
 %build
 autoreconf -fi
-%configure2_5x	--bindir=%{_gamesbindir} \
+%configure2_5x	--disable-sdltest --disable-freetypetest --without-x \
+		--bindir=%{_gamesbindir} \
 		--datadir=%{_gamesdatadir}
 %make
 
