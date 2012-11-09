@@ -1,0 +1,11 @@
+--- a/src/gamecore.cpp
++++ b/src/gamecore.cpp
+@@ -484,6 +484,8 @@
+ 		// add debugging
+ 	} else if(FontLoader::loadFont("sans", FONTS_DIR + string("ZEROES__.TTF"), 32)) {
+ 		// add debugging
++	} else if(FontLoader::loadFont("sans", string("/usr/share/fonts/TTF/dejavu/DejaVuSans.ttf"), 32)) {
++		cout << "Load font: " << string("/usr/share/fonts/TTF/dejavu/DejaVuSans.ttf") << endl;
+ 	} else {
+ 		cerr << "Failed to load fonts." << endl;
+ 		return false;
