@@ -1,0 +1,22 @@
+diff brutalchess-0.5.2.orig/src/faileplayer.cpp brutalchess-0.5.2/src/faileplayer.cpp
+--- brutalchess-0.5.2.orig/src/faileplayer.cpp	
++++ brutalchess-0.5.2/src/faileplayer.cpp	
+@@ -14,6 +14,7 @@
+ #include <cassert>
+ #include <sstream>
+ #include <string>
++#include <unistd.h>
+ 
+ using namespace std;
+ 
+diff brutalchess-0.5.2.orig/src/xboardplayer.cpp brutalchess-0.5.2/src/xboardplayer.cpp
+--- brutalchess-0.5.2.orig/src/xboardplayer.cpp	
++++ brutalchess-0.5.2/src/xboardplayer.cpp	
+@@ -14,6 +14,7 @@
+ #include <cassert>
+ #include <sstream>
+ #include <string>
++#include <unistd.h>
+ 
+ using namespace std;
+ 
