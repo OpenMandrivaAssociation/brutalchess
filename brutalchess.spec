@@ -1,6 +1,6 @@
 Name:		brutalchess
 Version:	0.5.2
-Release:	7
+Release:	8
 Summary:	A 3D chess game inspired by Battle Chess
 Group:		Games/Strategy
 License:	GPLv2+
