@@ -4,7 +4,7 @@ Release:	8
 Summary:	A 3D chess game inspired by Battle Chess
 Group:		Games/Strategy
 License:	GPLv2+
-URL:		http://brutalchess.sourceforge.net/
+URL:		https://brutalchess.sourceforge.net/
 Source0:	%{name}-alpha-%{version}-src.tar.bz2
 Source11:	%{name}-16x16.png
 Source12:	%{name}-32x32.png
