@@ -14,6 +14,11 @@ Patch1:		brutalchess-0.5.2-gcc4.3.patch
 Patch2:		brutalchess-0.5.2-use-own-fonts.patch
 Patch3:		brutalchess-0.5.2-gcc4.7.patch
 Requires:	fonts-ttf-dejavu
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(sdl)
 BuildRequires:	pkgconfig(SDL_image)
 BuildRequires:	pkgconfig(glu)
